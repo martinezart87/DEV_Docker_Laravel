@@ -2,14 +2,6 @@ echo "-------- ZMIANA UPRAWNIEŃ DO KATALOGU /var/www ---------"
 chown -R abc /var/www
 echo "----------- WYKONANO chown -R abc /var/www -------------"
 
-echo "-------------- PODMIENIAM settings.json ----------------"
-rm /config/data/User/settings.json
-cp /usr/local/bin/settings.json /config/data/User/settings.json
-chown abc:abc /config/data/User/settings.json
-chmod 644 /config/data/User/settings.json
-# PO RESTARCIE DOCKERA settiings.json zostaje nadpisany jako pusty plik :(
-echo "----------- WYKONANO PODMIANĘ settings.json ------------"
-
 echo "---------------- INSTALACJA ROZSZERZEŃ -----------------"
 /usr/local/bin/install-extension vscode-icons-team.vscode-icons
 /usr/local/bin/install-extension amiralizadeh9480.laravel-extra-intellisense
@@ -27,6 +19,13 @@ echo "---------------- INSTALACJA ROZSZERZEŃ -----------------"
 /usr/local/bin/install-extension xdebug.php-debug
 /usr/local/bin/install-extension zobo.php-intellisense
 echo "-------------- ROZSZERZENIA ZAINSTALOWANE ---------------"
+
+echo "-------------- PODMIENIAM settings.json ----------------"
+rm /config/data/User/settings.json
+cp /usr/local/bin/settings.json /config/data/User/settings.json
+chown abc:abc /config/data/User/settings.json
+chmod 644 /config/data/User/settings.json
+echo "----------- WYKONANO PODMIANĘ settings.json ------------"
 
 # code-server --install-extension georgykurian.laravel-ide-helper     
 # code-server --install-extension glitchbl.laravel-create-view        
