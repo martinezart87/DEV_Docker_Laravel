@@ -7,6 +7,7 @@ rm /config/data/User/settings.json
 cp /usr/local/bin/settings.json /config/data/User/settings.json
 chown abc:abc /config/data/User/settings.json
 chmod 644 /config/data/User/settings.json
+# PO RESTARCIE DOCKERA settiings.json zostaje nadpisany jako pusty plik :(
 echo "----------- WYKONANO PODMIANĘ settings.json ------------"
 
 echo "---------------- INSTALACJA ROZSZERZEŃ -----------------"

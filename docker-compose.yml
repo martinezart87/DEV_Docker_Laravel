@@ -43,7 +43,6 @@ services:
       # - PROXY_DOMAIN=code-server.my.domain 
       - DEFAULT_WORKSPACE=/var/www 
     volumes:
-      - /path/to/appdata/config:/config
       - /srv/www/${APP_NAME}:/var/www
     ports:
       - ${PORT_VSC}:8443
