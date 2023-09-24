@@ -1,0 +1,7 @@
+{
+    "workbench.colorTheme": "Visual Studio Dark",
+    "window.menuBarVisibility": "classic",
+    "workbench.iconTheme": "vscode-icons",
+    "extensions.autoUpdate": true,
+    "extensions.autoCheckUpdates": true
+}
