@@ -10,6 +10,9 @@ RUN apt-get update && apt-get install -y \
 RUN add-apt-repository ppa:ondrej/php
 RUN apt update
 RUN apt -y install php${PHP_V}
+RUN apt -y install php-xml
+RUN apt -y install php-curl
+RUN apt -y install zip unzip php-zip
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
