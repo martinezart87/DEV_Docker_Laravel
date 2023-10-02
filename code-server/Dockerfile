@@ -13,6 +13,7 @@ RUN apt -y install php${PHP_V}
 RUN apt -y install php-xml
 RUN apt -y install php-curl
 RUN apt -y install zip unzip php-zip
+RUN apt -y install php-mysql
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
