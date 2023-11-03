@@ -31,7 +31,7 @@ services:
       dockerfile: Dockerfile
       args:
         - PHP_V=${PHP_V}
-    container_name: code-server
+    container_name: code-server-${APP_NAME}
     environment:
       - PUID=1000
       - PGID=1000
